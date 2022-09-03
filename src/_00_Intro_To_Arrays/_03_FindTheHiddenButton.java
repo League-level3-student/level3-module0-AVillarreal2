@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 /* Run the FindHiddenButton.jar to see the finished product. */
 
-public class _03_FindTheHiddenButton implements ActionListener{
+public class _03_FindTheHiddenButton implements ActionListener {
     JFrame window;
     JPanel panel;
 
@@ -34,7 +34,7 @@ public class _03_FindTheHiddenButton implements ActionListener{
 
         // 3. Ask the user to enter a positive number and convert it to an int
 
-        String hiddenString = JOptionPane.showInputDialog("Please enter a number");
+        String hiddenString = JOptionPane.showInputDialog("Please enter a positive number");
         int pNumber = Integer.parseInt(hiddenString);
 
         // 4. Initialize the array of JButtons to be the size of the int
@@ -43,14 +43,14 @@ public class _03_FindTheHiddenButton implements ActionListener{
         buttonArray = new JButton[pNumber];
 
         // 5. Make a for loop to iterate through the JButton array
-            // 6. initialize each JButton in the array
-            // 7. add the ActionListener to each JButton
-            // 8. add each JButton to the panel
+        // 6. initialize each JButton in the array
+        // 7. add the ActionListener to each JButton
+        // 8. add each JButton to the panel
 
-        for(int i = 0; i < buttonArray.length; i++) {
+        for (int i = 0; i < buttonArray.length; i++) {
             buttonArray[i] = new JButton();
             buttonArray[i].addActionListener(this);
-            buttonArray[i].setSize(25,25);
+            buttonArray[i].setSize(25, 25);
             panel.add(buttonArray[i]);
         }
 
@@ -61,6 +61,7 @@ public class _03_FindTheHiddenButton implements ActionListener{
         // 10. call setExtendedState(JFrame.MAXIMIZED_BOTH) on your JFrame object.
 
         window.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // 11. set the JFrame to visible.
 
@@ -68,7 +69,7 @@ public class _03_FindTheHiddenButton implements ActionListener{
 
         // 12. Give the user the instructions for the game.
 
-        JOptionPane.showMessageDialog(null, "instructions: The number you put in will be the amount of buttons on the window, One will say 'ME' and click that one");
+        JOptionPane.showMessageDialog(null, "instructions: The number you put in will be the amount of buttons on the window. Click the button that says 'ME'");
 
         // 13. initialize the hiddenButton variable to a random number less than
         //     the int created in step 3
@@ -92,16 +93,15 @@ public class _03_FindTheHiddenButton implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        JButton buttonClicked = (JButton)e.getSource();
+        JButton buttonClicked = (JButton) e.getSource();
 
         // 17. if the hiddenButton is clicked, tell the user that they win.
         // 18. else tell them to try again
 
-        if(e.getSource()==buttonArray[hiddenButton]) {
+        if (e.getSource() == buttonArray[hiddenButton]) {
             JOptionPane.showMessageDialog(null, "YOU WIN!!!");
-        } else if (e.getSource()!=buttonArray[hiddenButton]) {
+        } else if (e.getSource() != buttonArray[hiddenButton]) {
             JOptionPane.showMessageDialog(null, "Try again...");
         }
-
     }
 }

@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8d50b13-120f-4a1a-924a-5907a4da8039" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Level3-Module0.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_00_Intro_To_Arrays/_01_IntroToArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_00_Intro_To_Arrays/_01_IntroToArrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_00_Intro_To_Arrays/_02_RobotRace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_00_Intro_To_Arrays/_02_RobotRace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_00_Intro_To_Arrays/_03_FindTheHiddenButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_00_Intro_To_Arrays/_03_FindTheHiddenButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_01_Simple_Array_Algorithms/_00_1D_Array_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_Simple_Array_Algorithms/_00_1D_Array_Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCowTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_01_Simple_Array_Algorithms/_00_1D_Array_Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_Simple_Array_Algorithms/_00_1D_Array_Methods.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
