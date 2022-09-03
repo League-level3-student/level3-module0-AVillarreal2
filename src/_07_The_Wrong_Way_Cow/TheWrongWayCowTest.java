@@ -25,8 +25,9 @@
 
 package _07_The_Wrong_Way_Cow;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 /*
  * Instructions for this assignment are in TheWrongWayCow.java file
