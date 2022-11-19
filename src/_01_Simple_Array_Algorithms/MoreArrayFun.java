@@ -3,12 +3,19 @@ package _01_Simple_Array_Algorithms;
 import java.util.Random;
 
 public class MoreArrayFun {
+    String[] strings;
     //1. Create a main method to test the other methods you write.
+    public static void main(String[] args) {
+        //strings = new String[];
+
+    }
 
 
 
     //2. Write a method that takes an array of Strings and prints all the Strings in the array.
+    void printStrings() {
 
+    }
 
 
     //3. Write a method that takes an array of Strings and prints all the Strings in the array

@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a8d50b13-120f-4a1a-924a-5907a4da8039" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_00_Intro_To_Arrays/_03_FindTheHiddenButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_00_Intro_To_Arrays/_03_FindTheHiddenButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_01_Simple_Array_Algorithms/_00_1D_Array_Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_Simple_Array_Algorithms/_00_1D_Array_Methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_01_Simple_Array_Algorithms/MoreArrayFun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_Simple_Array_Algorithms/MoreArrayFun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_02_Firework_Display/Firework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_02_Firework_Display/Firework.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_03_Intro_to_2D_Arrays/_01_IntroTo2DArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_Intro_to_2D_Arrays/_01_IntroTo2DArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_03_Intro_to_2D_Arrays/_02_2DArrayPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_Intro_to_2D_Arrays/_02_2DArrayPractice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +32,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application._03_FindTheHiddenButton">
-    <configuration name="_01_IntroToArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_00_Intro_To_Arrays._01_IntroToArrays" />
+  <component name="RunManager" selected="Application._02_2DArrayPractice">
+    <configuration name="FireworkDisplay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_Firework_Display.FireworkDisplay" />
       <module name="Level3-Module0" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_00_Intro_To_Arrays.*" />
+          <option name="PATTERN" value="_02_Firework_Display.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -44,12 +46,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_02_RobotRace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_00_Intro_To_Arrays._02_RobotRace" />
+    <configuration name="_00_2DArrayDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_Intro_to_2D_Arrays._00_2DArrayDemo" />
       <module name="Level3-Module0" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_00_Intro_To_Arrays.*" />
+          <option name="PATTERN" value="_03_Intro_to_2D_Arrays.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_01_IntroTo2DArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_Intro_to_2D_Arrays._01_IntroTo2DArrays" />
+      <module name="Level3-Module0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_03_Intro_to_2D_Arrays.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_02_2DArrayPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_Intro_to_2D_Arrays._02_2DArrayPractice" />
+      <module name="Level3-Module0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_03_Intro_to_2D_Arrays.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,9 +100,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._02_2DArrayPractice" />
+        <item itemvalue="Application._00_2DArrayDemo" />
+        <item itemvalue="Application._01_IntroTo2DArrays" />
+        <item itemvalue="Application.FireworkDisplay" />
         <item itemvalue="Application._03_FindTheHiddenButton" />
-        <item itemvalue="Application._02_RobotRace" />
-        <item itemvalue="Application._01_IntroToArrays" />
       </list>
     </recent_temporary>
   </component>
