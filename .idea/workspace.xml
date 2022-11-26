@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a8d50b13-120f-4a1a-924a-5907a4da8039" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_01_Simple_Array_Algorithms/MoreArrayFun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_Simple_Array_Algorithms/MoreArrayFun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_02_Firework_Display/Firework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_02_Firework_Display/Firework.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_03_Intro_to_2D_Arrays/_01_IntroTo2DArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_Intro_to_2D_Arrays/_01_IntroTo2DArrays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_03_Intro_to_2D_Arrays/_02_2DArrayPractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_Intro_to_2D_Arrays/_02_2DArrayPractice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Crazy_Digital_Painting/CrazyDigitalPainting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_Crazy_Digital_Painting/CrazyDigitalPainting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_05_Pixel_Art/GridPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_05_Pixel_Art/GridPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +31,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application._02_2DArrayPractice">
-    <configuration name="FireworkDisplay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_Firework_Display.FireworkDisplay" />
+  <component name="RunManager" selected="Application.CrazyDigitalPainting">
+    <configuration name="CrazyDigitalPainting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_04_Crazy_Digital_Painting.CrazyDigitalPainting" />
       <module name="Level3-Module0" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_Firework_Display.*" />
+          <option name="PATTERN" value="_04_Crazy_Digital_Painting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -46,8 +45,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_00_2DArrayDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_03_Intro_to_2D_Arrays._00_2DArrayDemo" />
+    <configuration name="_02_2DArrayPracticeTest.test_13_SouthNeighbor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Level3-Module0" />
       <extension name="coverage">
         <pattern>
@@ -55,12 +53,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="_03_Intro_to_2D_Arrays" />
+      <option name="MAIN_CLASS_NAME" value="_03_Intro_to_2D_Arrays._02_2DArrayPracticeTest" />
+      <option name="METHOD_NAME" value="test_13_SouthNeighbor" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_01_IntroTo2DArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_03_Intro_to_2D_Arrays._01_IntroTo2DArrays" />
+    <configuration name="_02_2DArrayPracticeTest.test_5_index2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Level3-Module0" />
       <extension name="coverage">
         <pattern>
@@ -68,12 +69,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="_03_Intro_to_2D_Arrays" />
+      <option name="MAIN_CLASS_NAME" value="_03_Intro_to_2D_Arrays._02_2DArrayPracticeTest" />
+      <option name="METHOD_NAME" value="test_5_index2" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_02_2DArrayPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_03_Intro_to_2D_Arrays._02_2DArrayPractice" />
+    <configuration name="_02_2DArrayPracticeTest.test_6_oneRowSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Level3-Module0" />
       <extension name="coverage">
         <pattern>
@@ -81,30 +85,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="_03_Intro_to_2D_Arrays" />
+      <option name="MAIN_CLASS_NAME" value="_03_Intro_to_2D_Arrays._02_2DArrayPracticeTest" />
+      <option name="METHOD_NAME" value="test_6_oneRowSum" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_03_FindTheHiddenButton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_00_Intro_To_Arrays._03_FindTheHiddenButton" />
+    <configuration name="_02_2DArrayPracticeTest.test_7_oneColumnSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Level3-Module0" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_00_Intro_To_Arrays.*" />
+          <option name="PATTERN" value="_03_Intro_to_2D_Arrays.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="_03_Intro_to_2D_Arrays" />
+      <option name="MAIN_CLASS_NAME" value="_03_Intro_to_2D_Arrays._02_2DArrayPracticeTest" />
+      <option name="METHOD_NAME" value="test_7_oneColumnSum" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application._02_2DArrayPractice" />
-        <item itemvalue="Application._00_2DArrayDemo" />
-        <item itemvalue="Application._01_IntroTo2DArrays" />
-        <item itemvalue="Application.FireworkDisplay" />
-        <item itemvalue="Application._03_FindTheHiddenButton" />
+        <item itemvalue="Application.CrazyDigitalPainting" />
+        <item itemvalue="JUnit._02_2DArrayPracticeTest.test_5_index2" />
+        <item itemvalue="JUnit._02_2DArrayPracticeTest.test_6_oneRowSum" />
+        <item itemvalue="JUnit._02_2DArrayPracticeTest.test_7_oneColumnSum" />
+        <item itemvalue="JUnit._02_2DArrayPracticeTest.test_13_SouthNeighbor" />
       </list>
     </recent_temporary>
   </component>

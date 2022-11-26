@@ -207,22 +207,51 @@ public class _02_2DArrayPractice {
      *    boundaries, return null.
      */
     public Integer getEastNeighbor(int[][] matrix, int row, int col) {
-
-        return null;
+        try {
+            int eat = matrix[row][col+1];
+            System.out.println(eat);
+            return eat;
+        }
+        catch(Exception e) {
+            System.out.println("The number is outside of the boundries for the EAST");
+            return null;
+        }
     }
 
-    public Integer getWestNeighbor(int[][] matrix, int row, int col) {
 
-        return null;
+    public Integer getWestNeighbor(int[][] matrix, int row, int col) {
+        try {
+            int waffles = matrix[row][col-1];
+            System.out.println(waffles);
+            return waffles;
+        }
+        catch(Exception e) {
+            System.out.println("The number is outside of the boundries for the WEST");
+            return null;
+        }
     }
 
     public Integer getNorthNeighbor(int[][] matrix, int row, int col) {
-
-        return null;
+        try {
+            int never = matrix[row-1][col];
+            System.out.println(never);
+            return never;
+        }
+        catch(Exception e) {
+            System.out.println("The number is outside of the boundries for the NORTH");
+            return null;
+        }
     }
 
     public Integer getSouthNeighbor(int[][] matrix, int row, int col) {
-
-        return null;
+        try {
+            int soggy = matrix[row+1][col];
+            System.out.println(soggy);
+            return soggy;
+        }
+        catch(Exception e) {
+            System.out.println("The number is outside of the boundries for the SOUTH");
+            return null;
+        }
     }
 }
