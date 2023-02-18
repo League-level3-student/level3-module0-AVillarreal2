@@ -187,6 +187,7 @@ public class WorldPanel extends JPanel implements MouseListener, ActionListener 
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        System.out.println("WorldPanel.  actionPerformed");
         step();
     }
 }

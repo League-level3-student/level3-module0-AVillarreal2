@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8d50b13-120f-4a1a-924a-5907a4da8039" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_05_Pixel_Art/ColorSelectionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_05_Pixel_Art/ColorSelectionPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_05_Pixel_Art/GridInputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_05_Pixel_Art/GridInputPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_05_Pixel_Art/GridPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_05_Pixel_Art/GridPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_05_Pixel_Art/Pixel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_05_Pixel_Art/Pixel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_05_Pixel_Art/PixelArtMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_05_Pixel_Art/PixelArtMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_06_Conways_Game_of_Life/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_Conways_Game_of_Life/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_06_Conways_Game_of_Life/WorldPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_Conways_Game_of_Life/WorldPanel.java" afterDir="false" />
     </list>
@@ -41,6 +35,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Code/IntelliJ/level3-module0-AVillarreal2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor.code.editing&quot;
   }
 }</component>
