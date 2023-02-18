@@ -1,12 +1,8 @@
 package _05_Pixel_Art;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 
-public class GridInputPanel extends JPanel{
+public class GridInputPanel extends JPanel {
     private static final long serialVersionUID = 1L;
     private JTextField windowWidthField;
     private JTextField windowHeightField;
@@ -35,7 +31,7 @@ public class GridInputPanel extends JPanel{
         add(colsField);
         add(submitButton);
 
-        submitButton.addActionListener((e)->submit());
+        submitButton.addActionListener((e) -> submit());
     }
 
     private void submit() {
@@ -50,16 +46,16 @@ public class GridInputPanel extends JPanel{
             r = Integer.parseInt(rowsField.getText());
             c = Integer.parseInt(colsField.getText());
 
-            if(w <= 0 || h <= 0 || r <= 0 || c <= 0) {
+            if (w <= 0 || h <= 0 || r <= 0 || c <= 0) {
                 invalidateInput();
-            }else {
+            } else {
                 valid = true;
             }
-        }catch(NumberFormatException e) {
+        } catch (NumberFormatException e) {
             invalidateInput();
         }
 
-        if(valid) {
+        if (valid) {
             pam.submitGridData(w, h, r, c);
         }
     }

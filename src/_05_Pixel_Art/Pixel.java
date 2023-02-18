@@ -1,8 +1,8 @@
 package _05_Pixel_Art;
 
-import java.awt.Color;
+import java.awt.*;
 
-public class Pixel{
+public class Pixel {
     public int x;
     public int y;
     public Color color;

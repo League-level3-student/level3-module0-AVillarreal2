@@ -1,19 +1,18 @@
 package _05_Pixel_Art;
 
-import java.awt.FlowLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.swing.JFrame;
-
-public class PixelArtMaker implements MouseListener{
+public class PixelArtMaker implements MouseListener {
     private JFrame window;
     private GridInputPanel gip;
     private GridPanel gp;
     ColorSelectionPanel csp;
 
     public void start() {
-        gip = new GridInputPanel(this);	
+        gip = new GridInputPanel(this);
         window = new JFrame("Pixel Art");
         window.setLayout(new FlowLayout());
         window.setResizable(false);

@@ -1,20 +1,14 @@
 package _05_Pixel_Art;
 
-import java.awt.Color;
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
-import java.util.Hashtable;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSlider;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-
-public class ColorSelectionPanel extends JPanel implements MouseListener, ChangeListener{
+public class ColorSelectionPanel extends JPanel implements MouseListener, ChangeListener {
     private static final long serialVersionUID = 1L;
 
     public static final int MAX_COLOR = 256;
@@ -56,8 +50,8 @@ public class ColorSelectionPanel extends JPanel implements MouseListener, Change
         colorLabel = new JLabel();
         colorImage = new BufferedImage(MAX_COLOR, MAX_COLOR, BufferedImage.TYPE_INT_RGB);
         color = new Color(r, g, b);
-        for(int i = 0; i < MAX_COLOR; i++) {
-            for(int j = 0; j < MAX_COLOR; j++) {
+        for (int i = 0; i < MAX_COLOR; i++) {
+            for (int j = 0; j < MAX_COLOR; j++) {
                 colorImage.setRGB(j, i, color.getRGB());
             }
         }
@@ -101,23 +95,22 @@ public class ColorSelectionPanel extends JPanel implements MouseListener, Change
     public void mouseExited(MouseEvent e) {
 
     }
+
     @Override
     public void stateChanged(ChangeEvent e) {
-        JSlider s = (JSlider)e.getSource();
-        if(s == rSlider) {
+        JSlider s = (JSlider) e.getSource();
+        if (s == rSlider) {
             r = s.getValue();
-        }
-        else if(s == gSlider) {
+        } else if (s == gSlider) {
             g = s.getValue();
-        }
-        else if(s == bSlider) {
+        } else if (s == bSlider) {
             b = s.getValue();
         }
 
         color = new Color(r, g, b);
 
-        for(int i = 0; i < MAX_COLOR; i++) {
-            for(int j = 0; j < MAX_COLOR; j++) {
+        for (int i = 0; i < MAX_COLOR; i++) {
+            for (int j = 0; j < MAX_COLOR; j++) {
                 colorImage.setRGB(j, i, color.getRGB());
             }
         }
