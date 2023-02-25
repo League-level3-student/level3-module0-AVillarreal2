@@ -37,75 +37,20 @@ public class Cell implements Drawable{
      */
 
     public void liveOrDie(int numNeighbors) {
-        if(numNeighbors<2) {
-            isAlive=false;
+        if (numNeighbors <= 1 & isAlive) {
+            isAlive = false;
         }
-        if(numNeighbors==2||numNeighbors==3) {
-            isAlive=true;
+        if (numNeighbors == 2 && isAlive || numNeighbors == 3 && isAlive) {
+            isAlive = true;
         }
-        if(numNeighbors>3) {
-            isAlive=false;
+        if (numNeighbors >= 4 && isAlive) {
+            isAlive = false;
         }
-        if(numNeighbors==3) {
-            isAlive=true;
+        if (numNeighbors == 3 && !isAlive) {
+            isAlive = true;
         }
     }
-//
-//    public void liveOrDie( int numNeighbors )
-//    {
-//        if ( IsUnderpopulated( numNeighbors) )
-//        {
-//            isAlive = false; // died
-//        }
-//        else if ( IsOverpopulated( numNeighbors) )
-//        {
-//            isAlive = false; // died
-//        }
-//        else if ( IsRepopulated(( numNeighbors)))
-//        {
-//            isAlive = true;
-//        }
-//        else if ( IsNextGeneration(( numNeighbors)))
-//        {
-//            isAlive = true;
-//        }
-//    }
-//
-//    public boolean IsUnderpopulated( int numNeighbors )
-//    {
-//        boolean status = false;
-//        if(numNeighbors < 2) {
-//            status=true;
-//        }
-//        return status;
-//    }
-//
-//    public boolean IsOverpopulated(int numNeighbors )
-//    {
-//        boolean status = false;
-//        if(numNeighbors>3) {
-//            status=true;
-//        }
-//        return status;
-//    }
-//
-//    public boolean IsRepopulated(int numNeighbors )
-//    {
-//        boolean status = false;
-//        if(numNeighbors==3) {
-//            status=true;
-//        }
-//        return status;
-//    }
-//
-//    public boolean IsNextGeneration( int numNeighbors )
-//    {
-//        boolean status = false;
-//        if(numNeighbors>=2&&numNeighbors<=3) {
-//            status=true;
-//        }
-//        return status;
-//    }
+
 
     public int getX() {
         return x;
