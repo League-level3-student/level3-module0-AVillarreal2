@@ -48,12 +48,35 @@
 
 package _07_The_Wrong_Way_Cow;
 
+import java.util.Objects;
+
 public class TheWrongWayCow {
 
     public static int[] findWrongWayCow(final char[][] field) {
         // Fill in the code to return the [col, row] coordinate position of the
         // head (letter 'c') of the wrong way cow!
-        
+
+        //how to find the wrong way cow:
+        //1. go through all of the characters, check if it is "c"
+        //2. if it is, look at all of the different sides of where the "o" is (N,E,S,W,SW,NW,SE,NE)
+        //3. add it to a list of which if the first two are the same keep looking until there is a different one,
+        // and if there is already a different one just give the location of that one.
+
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (Objects.equals(field[i][j], "c")) {
+                    if(Objects.equals(field[i][j], "o")) {
+                    }else if(Objects.equals(field[i][j], "o")) {
+                    }else if(Objects.equals(field[i][j], "o")) {
+                    }else if(Objects.equals(field[i][j], "o")) {
+                    }else if(Objects.equals(field[i][j], "o")) {
+                    }else if(Objects.equals(field[i][j], "o")) {
+                    }else if(Objects.equals(field[i][j], "o")) {
+                    }else if(Objects.equals(field[i][j], "o")) {
+                    }
+                }
+            }
+        }
         return null;
     }
 }
