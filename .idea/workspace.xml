@@ -44,7 +44,7 @@
       <recent name="C:\Users\angel\Documents\GitHub\level3-module0-AVillarreal2\src\_06_Conways_Game_of_Life" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TheWrongWayCowTest.simple">
+  <component name="RunManager" selected="JUnit.TheWrongWayCowTest">
     <configuration name="ConwaysGameOfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_06_Conways_Game_of_Life.ConwaysGameOfLife" />
       <module name="Level3-Module0" />
@@ -71,6 +71,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TheWrongWayCowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Level3-Module0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_07_The_Wrong_Way_Cow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="_07_The_Wrong_Way_Cow" />
+      <option name="MAIN_CLASS_NAME" value="_07_The_Wrong_Way_Cow.TheWrongWayCowTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TheWrongWayCowTest.simple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Level3-Module0" />
       <extension name="coverage">
@@ -91,17 +106,13 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/src/_06_Conways_Game_of_Life/ConwaysGameOfLife.jar" />
       <method v="2" />
     </configuration>
-    <configuration name="PixelArtMaker.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/src/_05_Pixel_Art/PixelArtMaker.jar" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TheWrongWayCowTest" />
         <item itemvalue="JUnit.TheWrongWayCowTest.simple" />
         <item itemvalue="Application.ConwaysGameOfLife" />
         <item itemvalue="JAR Application.ConwaysGameOfLife.jar" />
         <item itemvalue="Application.PixelArtMaker" />
-        <item itemvalue="JAR Application.PixelArtMaker.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -130,10 +141,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCow.java</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCowTest.java</url>
           <option name="timeStamp" value="3" />
