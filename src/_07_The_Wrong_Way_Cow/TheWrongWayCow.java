@@ -48,6 +48,8 @@
 
 package _07_The_Wrong_Way_Cow;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class TheWrongWayCow {
@@ -66,28 +68,19 @@ public class TheWrongWayCow {
         // W  c  E  =  [i][j-1]     [i][j]     [i][j+1]
         // SW S SE     [i+1][j-1]  [i+1][j]  [i+1][j+1]
 
-        int cx1 = 0;
-        int cy1 = 0;
-        int ox1 = 0;
-        int oy1 = 0;
+//        int cx1 = 0;
+//        int cy1 = 0;
+//        int ox1 = 0;
+//        int oy1 = 0;
+//
+//        int cx2 = 0;
+//        int cy2 = 0;
+//        int ox2 = 0;
+//        int oy2 = 0;
 
-        int cx2 = 0;
-        int cy2 = 0;
-        int ox2 = 0;
-        int oy2 = 0;
-
-        //
-
-        for (int i = 0; i < field.length; i++) {
-            for (int j = 0; j < field[i].length; j++) {
-                if (Objects.equals(field[i][j], "c")) { //checks if [i][j] is c
-                    for (int k = -1; k < 1; k++) {
-                        for (int l = -1; l < 1; l++) {
-                            if (Objects.equals(field[i + k][j + l], "o")) { //runs through a 3x3 around the c
-                                ox1 = cx1 + k;
-                                oy1 = cy1 + l;
-                            }
-                        }
+//        for (int i = 0; i < field.length; i++) {
+//            for (int j = 0; j < field[i].length; j++) {
+//                if (Objects.equals(field[i][j], "c")) { //checks if [i][j] is c
 //                    if(Objects.equals(field[i-1][j], "o")) { //if it is, checks if o is N
 //                        ox1 = cx1-1;
 //                        oy1 = cy1;
@@ -113,10 +106,55 @@ public class TheWrongWayCow {
 //                        ox1 = cx1+1;
 //                        oy1 = cy1+1;
 //                    }
+//                    }
+//                }
+//            }
+//        }
+
+        //go through list, and then return the one cow
+
+        int direction1 = 0, direction2 = 0, direction3 = 0, direction4 = 0, direction6 = 0, direction7 = 0, direction8 = 0, direction9 = 0;
+
+        List<Integer> xes = new ArrayList<Integer>();
+        List<Integer> yes = new ArrayList<Integer>();
+        List<Integer> direction = new ArrayList<Integer>(); //direction defined from left->right up->down 1-9
+
+            for (int i = 0; i < field.length; i++) {
+                for (int j = 0; j < field[i].length; j++) {
+                    if (Objects.equals((field[i][j]), "c")) {
+                        for (int k = -1; k < 1; k++) {
+                            for (int l = -1; l < 1; l++) {
+                                if (Objects.equals(field[i + k][j + l], "o")) {
+                                    xes.add(i);
+                                    yes.add(j);
+                                    if(k==-1&&l==-1) { direction.add(1); }
+                                    else if(k==-1&&l==1) { direction.add(2); }
+                                    else if(k==-1&&l==+1) { direction.add(3); }
+                                    else if(k==1&&l==-1) { direction.add(4); }
+                                    else if(k==1&&l==+1) { direction.add(6); }
+                                    else if(k==+1&&l==-1) { direction.add(7); }
+                                    else if(k==+1&&l==1) { direction.add(8); }
+                                    else if(k==+1&&l==+1) { direction.add(9); }
+                                }
+                            }
+                        }
                     }
                 }
             }
+            for (int i = 0; i < direction.size(); i++) {
+                if (direction.get(i)==1){ direction1++;}
+                if (direction.get(i)==2){ direction2++;}
+                if (direction.get(i)==3){ direction3++;}
+                if (direction.get(i)==4){ direction4++;}
+                if (direction.get(i)==6){ direction6++;}
+                if (direction.get(i)==7){ direction7++;}
+                if (direction.get(i)==8){ direction8++;}
+                if (direction.get(i)==9){ direction9++;}
+            }
+        for (int i = 0; i < 8; i++) {
+            
         }
-        return new int[]{cx2, cy2}; //actually return something
+
+        return new int[]{1, 1}; //actually return something
     }
 }

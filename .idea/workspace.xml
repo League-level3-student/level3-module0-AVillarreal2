@@ -7,12 +7,18 @@
     <list default="true" id="a8d50b13-120f-4a1a-924a-5907a4da8039" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCowTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +35,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2DwspFzQS04hroZDyqAKbHX011u" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,7 +53,7 @@
       <recent name="C:\Users\angel\Documents\GitHub\level3-module0-AVillarreal2\src\_06_Conways_Game_of_Life" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TheWrongWayCowTest">
+  <component name="RunManager" selected="JUnit.TheWrongWayCowTest.simple">
     <configuration name="ConwaysGameOfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_06_Conways_Game_of_Life.ConwaysGameOfLife" />
       <module name="Level3-Module0" />
@@ -108,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TheWrongWayCowTest" />
         <item itemvalue="JUnit.TheWrongWayCowTest.simple" />
+        <item itemvalue="JUnit.TheWrongWayCowTest" />
         <item itemvalue="Application.ConwaysGameOfLife" />
         <item itemvalue="JAR Application.ConwaysGameOfLife.jar" />
         <item itemvalue="Application.PixelArtMaker" />
