@@ -64,9 +64,9 @@ public class TheWrongWayCow {
         //3. add it to a list of which if the first two are the same keep looking until there is a different one,
         // and if there is already a different one just give the location of that one.
 
-        // NW N NE     [i-1][j-1]  [i-1][j]  [i-1][j+1]
+        // NW(1) N(2) NE(3)     [i-1][j-1]  [i-1][j]  [i-1][j+1]
         // W  c  E  =  [i][j-1]     [i][j]     [i][j+1]
-        // SW S SE     [i+1][j-1]  [i+1][j]  [i+1][j+1]
+        // SW S  SE    [i+1][j-1]  [i+1][j]  [i+1][j+1]
 
 //        int cx1 = 0;
 //        int cy1 = 0;
@@ -113,28 +113,24 @@ public class TheWrongWayCow {
 
         //go through list, and then return the one cow
 
-        int direction1 = 0, direction2 = 0, direction3 = 0, direction4 = 0, direction6 = 0, direction7 = 0, direction8 = 0, direction9 = 0;
+        int directionN = 0, directionW = 0, directionE = 0, directionS = 0
 
         List<Integer> xes = new ArrayList<Integer>();
         List<Integer> yes = new ArrayList<Integer>();
         List<Integer> direction = new ArrayList<Integer>(); //direction defined from left->right up->down 1-9
 
             for (int i = 0; i < field.length; i++) {
-                for (int j = 0; j < field[i].length; j++) {
-                    if (Objects.equals((field[i][j]), "c")) {
+                for (int j = 0; j < field[i].length; j++) { //go through field
+                    if (Objects.equals((field[i][j]), "c")) { //check if character is c
                         for (int k = -1; k < 1; k++) {
-                            for (int l = -1; l < 1; l++) {
-                                if (Objects.equals(field[i + k][j + l], "o")) {
+                            for (int l = -1; l < 1; l++) { //go through 3x3 around c
+                                if (Objects.equals(field[i + k][j + l], "o")) { //check if character is o
                                     xes.add(i);
-                                    yes.add(j);
-                                    if(k==-1&&l==-1) { direction.add(1); }
-                                    else if(k==-1&&l==1) { direction.add(2); }
-                                    else if(k==-1&&l==+1) { direction.add(3); }
-                                    else if(k==1&&l==-1) { direction.add(4); }
-                                    else if(k==1&&l==+1) { direction.add(6); }
-                                    else if(k==+1&&l==-1) { direction.add(7); }
-                                    else if(k==+1&&l==1) { direction.add(8); }
-                                    else if(k==+1&&l==+1) { direction.add(9); }
+                                    yes.add(j); //add x and y of the c position to a list
+                                    if(k==-1&&l==1) { direction.add(2); }
+                                    if(k==1&&l==-1) { direction.add(4); }
+                                    if(k==1&&l==+1) { direction.add(6); }
+                                    if(k==+1&&l==1) { direction.add(8); } //itll check where the o is, in terms of a 1-9 number, 5 being the center, then it'll add it to a list
                                 }
                             }
                         }
@@ -142,19 +138,49 @@ public class TheWrongWayCow {
                 }
             }
             for (int i = 0; i < direction.size(); i++) {
-                if (direction.get(i)==1){ direction1++;}
-                if (direction.get(i)==2){ direction2++;}
-                if (direction.get(i)==3){ direction3++;}
-                if (direction.get(i)==4){ direction4++;}
-                if (direction.get(i)==6){ direction6++;}
-                if (direction.get(i)==7){ direction7++;}
-                if (direction.get(i)==8){ direction8++;}
-                if (direction.get(i)==9){ direction9++;}
-            }
-        for (int i = 0; i < 8; i++) {
-            
-        }
+                 if (direction.get(i)==2){ directionN++;}
+                 if (direction.get(i)==4){ directionW++;}
+                 if (direction.get(i)==6){ directionE++;}
+                 if (direction.get(i)==8){ directionS++;}
 
-        return new int[]{1, 1}; //actually return something
+                System.out.println("N:"+directionN);
+                System.out.println("W:"+directionW);
+                System.out.println("E:"+directionE);
+                System.out.println("S:"+directionS);
+            }
+
+        TheWrongWayCow cow = new TheWrongWayCow();
+            int p;
+        p = cow.checkDirectionIfOne(direction1, direction, xes, yes);
+        cow.checkDirectionIfOne(direction2, direction, xes, yes);
+        cow.checkDirectionIfOne(direction3, direction, xes, yes);
+        cow.checkDirectionIfOne(direction4, direction, xes, yes);
+        cow.checkDirectionIfOne(direction6, direction, xes, yes);
+        cow.checkDirectionIfOne(direction7, direction, xes, yes);
+        cow.checkDirectionIfOne(direction8, direction, xes, yes);
+        cow.checkDirectionIfOne(direction9, direction, xes, yes);
+
+
+        return new int[]{3, 0}; //actually return something
+        // return new int[]{xes.get(i), yes.get(i)}; //return the x and y values that SHOULD be the same i as the direction only counted once
+    }
+
+    int checkDirectionIfOne(int directionasd, List<Integer> dirlist, List<Integer> xes, List<Integer> yes) { //put void for now
+        if(directionasd==1){
+            for (int i = 0; i < dirlist.size(); i++) { //if it has, then go through the direction list
+                if (dirlist.get(i)==directionasd){ //check if the direction i is the same one as the direction counted once
+                   return i;
+                }
+            }
+        }
+        return 0;
     }
 }
+
+//        if(direction1==1){ //checks if the specified direction has only been counted once
+//            for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
+//                if (direction.get(i)==direction1){ //check if the direction i is the same one as the direction counted once
+//                    return new int[]{xes.get(i), yes.get(i)}; //return the x and y values that SHOULD be the same i as the direction only counted once
+//                }
+//            }
+//        }

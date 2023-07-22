@@ -45,12 +45,12 @@ public class TheWrongWayCowTest {
   @Test
   public void simple() {
     final char[][] field = new char[][] {
-      "cowc".toCharArray(),
+      "cowc ".toCharArray(),
       "cowo".toCharArray(),
       "coww".toCharArray(),
       "cow.".toCharArray(),
       };
-    assertArrayEquals(new int[]{3,0}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{3 ,0}, TheWrongWayCow.findWrongWayCow(show(field)));
   }
 
   @Test

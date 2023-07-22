@@ -7,6 +7,7 @@
     <list default="true" id="a8d50b13-120f-4a1a-924a-5907a4da8039" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_The_Wrong_Way_Cow/TheWrongWayCowTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +43,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Code/IntelliJ/level3-module0-AVillarreal2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor.code.editing&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "D:/Projects/Code/IntelliJ/level3-module0-AVillarreal2",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\angel\Documents\GitHub\level3-module0-AVillarreal2\src\_06_Conways_Game_of_Life" />
