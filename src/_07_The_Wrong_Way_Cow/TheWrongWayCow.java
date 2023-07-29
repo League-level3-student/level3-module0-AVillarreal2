@@ -1,50 +1,50 @@
 /*
  * https://www.codewars.com/kata/the-wrong-way-cow
- * 
+ *
  * Task
  * Given a field of cows find which one is the Wrong-Way Cow and return her
  * position.
- * 
+ *
  * Notes:
- * 
+ *
  * There are always at least 3 cows in a herd
  * There is only 1 Wrong-Way Cow!
  * Fields are rectangular
  * The cow position is zero-based [col,row] of her head (i.e. the letter c)
  * Examples
  * Ex1
- * 
+ *
  * cow.cow.cow.cow.cow
  * cow.cow.cow.cow.cow
  * cow.woc.cow.cow.cow
  * cow.cow.cow.cow.cow
  * Answer: [6,2]
- * 
+ *
  * Ex2
- * 
+ *
  * c..........
  * o...c......
  * w...o.c....
  * ....w.o....
  * ......w.cow
  * Answer: [8,4]
- * 
+ *
  * Notes
  * The test cases will NOT test any situations where there are "imaginary" cows,
  * so your solution does not need to worry about such things!
- * 
+ *
  * To explain - Yes, I recognize that there are certain configurations where an
  * "imaginary" cow may appear that in fact is just made of three other "real" cows.
- * 
+ *
  * In the following field you can see there are 4 real cows (3 are facing south and
  * 1 is facing north). There are also 2 imaginary cows (facing east and west).
- * 
+ *
  * ...w...
  * ..cow..
  * .woco..
  * .ow.c..
  * .c.....
-*/
+ */
 
 package _07_The_Wrong_Way_Cow;
 
@@ -113,63 +113,97 @@ public class TheWrongWayCow {
 
         //go through list, and then return the one cow
 
-        int directionN = 0, directionW = 0, directionE = 0, directionS = 0
+        int directionN = 0, directionW = 0, directionE = 0, directionS = 0;
 
         List<Integer> xes = new ArrayList<Integer>();
         List<Integer> yes = new ArrayList<Integer>();
-        List<Integer> direction = new ArrayList<Integer>(); //direction defined from left->right up->down 1-9
+        List<String> direction = new ArrayList<String>(); //direction defined from left->right up->down 1-9
 
-            for (int i = 0; i < field.length; i++) {
-                for (int j = 0; j < field[i].length; j++) { //go through field
-                    if (Objects.equals((field[i][j]), "c")) { //check if character is c
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) { //go through field
+                if (Objects.equals((field[i][j]), 'c')) { //check if character is c
+                    if(i>0) {
                         for (int k = -1; k < 1; k++) {
-                            for (int l = -1; l < 1; l++) { //go through 3x3 around c
-                                if (Objects.equals(field[i + k][j + l], "o")) { //check if character is o
-                                    xes.add(i);
-                                    yes.add(j); //add x and y of the c position to a list
-                                    if(k==-1&&l==1) { direction.add(2); }
-                                    if(k==1&&l==-1) { direction.add(4); }
-                                    if(k==1&&l==+1) { direction.add(6); }
-                                    if(k==+1&&l==1) { direction.add(8); } //itll check where the o is, in terms of a 1-9 number, 5 being the center, then it'll add it to a list
+                            if(j>0) {
+                                for (int l = -1; l < 1; l++) { //go through 3x3 around c
+                                    if (Objects.equals(field[i + k][j + l], 'o')) { //check if character is o
+                                        xes.add(i);
+                                        yes.add(j); //add x and y of the c position to a list
+                                        if (k == -1 && l == 1) {
+                                            direction.add("North");
+                                        }
+                                        if (k == 1 && l == -1) {
+                                            direction.add("West");
+                                        }
+                                        if (k == 1 && l == +1) {
+                                            direction.add("East");
+                                        }
+                                        if (k == +1 && l == 1) {
+                                            direction.add("South");
+                                        } //itll check where the o is, in terms of a 1-9 number, 5 being the center, then it'll add it to a list
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-            for (int i = 0; i < direction.size(); i++) {
-                 if (direction.get(i)==2){ directionN++;}
-                 if (direction.get(i)==4){ directionW++;}
-                 if (direction.get(i)==6){ directionE++;}
-                 if (direction.get(i)==8){ directionS++;}
-
-                System.out.println("N:"+directionN);
-                System.out.println("W:"+directionW);
-                System.out.println("E:"+directionE);
-                System.out.println("S:"+directionS);
+        }
+        for (int i = 0; i < direction.size(); i++) {
+            if (direction.get(i) == 2) {
+                directionN++;
             }
+            if (direction.get(i) == 4) {
+                directionW++;
+            }
+            if (direction.get(i) == 6) {
+                directionE++;
+            }
+            if (direction.get(i) == 8) {
+                directionS++;
+            }
+        }
+        System.out.println("N:" + directionN);
+        System.out.println("W:" + directionW);
+        System.out.println("E:" + directionE);
+        System.out.println("S:" + directionS);
 
-        TheWrongWayCow cow = new TheWrongWayCow();
-            int p;
-        p = cow.checkDirectionIfOne(direction1, direction, xes, yes);
-        cow.checkDirectionIfOne(direction2, direction, xes, yes);
-        cow.checkDirectionIfOne(direction3, direction, xes, yes);
-        cow.checkDirectionIfOne(direction4, direction, xes, yes);
-        cow.checkDirectionIfOne(direction6, direction, xes, yes);
-        cow.checkDirectionIfOne(direction7, direction, xes, yes);
-        cow.checkDirectionIfOne(direction8, direction, xes, yes);
-        cow.checkDirectionIfOne(direction9, direction, xes, yes);
+        if (directionN == 1) {
+            for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
+                if (direction.get(i) == directionN) { //check if the direction i is the same one as the direction counted once
+                    return new int[]{xes.get(i), yes.get(i)};
+                }
+            }
+        } else if (directionW == 1) {
+            for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
+                if (direction.get(i) == directionW) { //check if the direction i is the same one as the direction counted once
+                    return new int[]{xes.get(i), yes.get(i)};
+                }
+            }
+        } else if (directionE == 1) {
+            for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
+                if (direction.get(i) == directionE) { //check if the direction i is the same one as the direction counted once
+                    return new int[]{xes.get(i), yes.get(i)};
+                }
+            }
+        } else if (directionS == 1) {
+            for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
+                if (direction.get(i) == directionS) { //check if the direction i is the same one as the direction counted once
+                    return new int[]{xes.get(i), yes.get(i)};
+                }
+            }
+        }
 
-
-        return new int[]{3, 0}; //actually return something
+        return null; //actually return something
         // return new int[]{xes.get(i), yes.get(i)}; //return the x and y values that SHOULD be the same i as the direction only counted once
     }
 
+
     int checkDirectionIfOne(int directionasd, List<Integer> dirlist, List<Integer> xes, List<Integer> yes) { //put void for now
-        if(directionasd==1){
+        if (directionasd == 1) {
             for (int i = 0; i < dirlist.size(); i++) { //if it has, then go through the direction list
-                if (dirlist.get(i)==directionasd){ //check if the direction i is the same one as the direction counted once
-                   return i;
+                if (dirlist.get(i) == directionasd) { //check if the direction i is the same one as the direction counted once
+                    return i;
                 }
             }
         }
