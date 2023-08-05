@@ -129,18 +129,9 @@ public class TheWrongWayCow {
                                     if (Objects.equals(field[i + k][j + l], 'o')) { //check if character is o
                                         xes.add(i);
                                         yes.add(j); //add x and y of the c position to a list
-                                        if (k == -1 && l == 1) {
-                                            direction.add("North");
-                                        }
-                                        if (k == 1 && l == -1) {
-                                            direction.add("West");
-                                        }
-                                        if (k == 1 && l == +1) {
-                                            direction.add("East");
-                                        }
-                                        if (k == +1 && l == 1) {
-                                            direction.add("South");
-                                        } //itll check where the o is, in terms of a 1-9 number, 5 being the center, then it'll add it to a list
+
+                                        //check the cardinal directions but make sure it doesnt go out of bounds
+                                        
                                     }
                                 }
                             }
@@ -149,17 +140,17 @@ public class TheWrongWayCow {
                 }
             }
         }
-        for (int i = 0; i < direction.size(); i++) {
-            if (direction.get(i) == 2) {
+        for (int i = 0; direction.size() > i; i++) {
+            if (direction.get(i).equals("North")) {
                 directionN++;
             }
-            if (direction.get(i) == 4) {
+            if (direction.get(i).equals("West")) {
                 directionW++;
             }
-            if (direction.get(i) == 6) {
+            if (direction.get(i).equals("East")) {
                 directionE++;
             }
-            if (direction.get(i) == 8) {
+            if (direction.get(i).equals("South")) {
                 directionS++;
             }
         }
@@ -170,25 +161,25 @@ public class TheWrongWayCow {
 
         if (directionN == 1) {
             for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
-                if (direction.get(i) == directionN) { //check if the direction i is the same one as the direction counted once
+                if (direction.get(i).equals("North")) { //check if the direction i is the same one as the direction counted once
                     return new int[]{xes.get(i), yes.get(i)};
                 }
             }
         } else if (directionW == 1) {
             for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
-                if (direction.get(i) == directionW) { //check if the direction i is the same one as the direction counted once
+                if (direction.get(i).equals("West")) { //check if the direction i is the same one as the direction counted once
                     return new int[]{xes.get(i), yes.get(i)};
                 }
             }
         } else if (directionE == 1) {
             for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
-                if (direction.get(i) == directionE) { //check if the direction i is the same one as the direction counted once
+                if (direction.get(i).equals("East")) { //check if the direction i is the same one as the direction counted once
                     return new int[]{xes.get(i), yes.get(i)};
                 }
             }
         } else if (directionS == 1) {
             for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
-                if (direction.get(i) == directionS) { //check if the direction i is the same one as the direction counted once
+                if (direction.get(i).equals("South")) { //check if the direction i is the same one as the direction counted once
                     return new int[]{xes.get(i), yes.get(i)};
                 }
             }
