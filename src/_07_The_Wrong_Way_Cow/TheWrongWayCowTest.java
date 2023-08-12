@@ -45,7 +45,7 @@ public class TheWrongWayCowTest {
   @Test
   public void simple() {
     final char[][] field = new char[][] {
-      "cowc ".toCharArray(),
+      "cowc".toCharArray(),
       "cowo".toCharArray(),
       "coww".toCharArray(),
       "cow.".toCharArray(),
