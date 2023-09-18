@@ -53,7 +53,7 @@
       <recent name="C:\Users\angel\Documents\GitHub\level3-module0-AVillarreal2\src\_06_Conways_Game_of_Life" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TheWrongWayCowTest.ex1">
+  <component name="RunManager" selected="JUnit.TheWrongWayCowTest.simple">
     <configuration name="ConwaysGameOfLife" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_06_Conways_Game_of_Life.ConwaysGameOfLife" />
       <module name="Level3-Module0" />
@@ -120,8 +120,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TheWrongWayCowTest.ex1" />
         <item itemvalue="JUnit.TheWrongWayCowTest.simple" />
+        <item itemvalue="JUnit.TheWrongWayCowTest.ex1" />
         <item itemvalue="JUnit.TheWrongWayCowTest" />
         <item itemvalue="Application.ConwaysGameOfLife" />
         <item itemvalue="JAR Application.ConwaysGameOfLife.jar" />
