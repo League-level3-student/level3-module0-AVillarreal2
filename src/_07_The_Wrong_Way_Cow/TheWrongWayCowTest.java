@@ -50,7 +50,7 @@ public class TheWrongWayCowTest {
       "coww".toCharArray(),
       "cow.".toCharArray(),
       };
-    assertArrayEquals(new int[]{3 ,0}, TheWrongWayCow.findWrongWayCow(show(field)));
+    assertArrayEquals(new int[]{3,0}, TheWrongWayCow.findWrongWayCow(show(field)));
   }
 
   @Test

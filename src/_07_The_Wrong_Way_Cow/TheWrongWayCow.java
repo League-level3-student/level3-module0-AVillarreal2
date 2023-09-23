@@ -64,36 +64,40 @@ public class TheWrongWayCow {
 
         List<Integer> xes = new ArrayList<Integer>();
         List<Integer> yes = new ArrayList<Integer>();
-        List<String> direction = new ArrayList<String>(); //direction defined from left->right up->down 1-9
+        List<String> direction = new ArrayList<String>(); //"Up", "Left", "Right", "Down"
 
+        System.out.println("Field Length = " + field.length);
         for (int y = 0; y < field.length; y++) {
             for (int x = 0; x < field[y].length; x++) { //going through field
-                if (Objects.equals((field[x][y]), 'c')) { //check if character is c
-                    if(y > 0) { //if statement to check if out of bounds
-                        if(Objects.equals((field[x][y-1]), 'o')) {
+                System.out.println("Field Length Y = " + field[y].length);
+                System.out.println("y:" + y + ", x:" + x);
+                if (Objects.equals((field[y][x]), 'c')) { //check if character is c
+                    if (x != 0) { //if statement to check if out of bounds
+                        if (Objects.equals((field[y][x - 1]), 'o')) {
                             xes.add(x);
                             yes.add(y);
                             direction.add("Up");
                         }
                     }
-                    if(x > 0) {
-                        if(Objects.equals((field[x-1][y]), 'o')) {
+                    if (y != 0) {
+                        if (Objects.equals((field[y - 1][x]), 'o')) {
                             xes.add(x);
                             yes.add(y);
                             direction.add("Left");
                         }
                     }
-                    if(x < field.length-1) {
-                        if(Objects.equals((field[x+1][y]), 'o')) {
+                    if (y != field.length - 1) { //check if not on Right column
+                        if (Objects.equals((field[y + 1][x]), 'o')) {
                             xes.add(x);
                             yes.add(y);
                             direction.add("Right");
                         }
                     }
-                    if(y < field[x].length-1) {
-                        if(Objects.equals((field[x][y+1]), 'o')) {
-                            xes.add(x);
-                            yes.add(y);
+                    System.out.println(field[y].length);
+                    if (x < field[y].length-1) { //check if not on bottom row
+                        if (Objects.equals((field[y][x + 1]), 'o')) {
+                            xes.add(y);
+                            yes.add(x);
                             direction.add("Down");
                         }
                     }
@@ -120,27 +124,31 @@ public class TheWrongWayCow {
         System.out.println("Down: " + directionD);
 
         if (directionU == 1) {
-            for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
-                if (direction.get(i).equals("Up")) { //check if the direction i is the same one as the direction counted once
-                    return new int[]{xes.get(i), yes.get(i)};
+            for (int directionCycle = 0; directionCycle < direction.size(); directionCycle++) {
+                if (direction.get(directionCycle).equals("Up")) {
+                    System.out.println("Returning:" + xes.get(directionCycle) + "," + yes.get(directionCycle));
+                    return new int[]{xes.get(directionCycle), yes.get(directionCycle)};
                 }
             }
         } else if (directionL == 1) {
-            for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
-                if (direction.get(i).equals("Left")) { //check if the direction i is the same one as the direction counted once
-                    return new int[]{xes.get(i), yes.get(i)};
+            for (int directionCycle = 0; directionCycle < direction.size(); directionCycle++) {
+                if (direction.get(directionCycle).equals("Left")) {
+                    System.out.println("Returning:" + xes.get(directionCycle) + "," + yes.get(directionCycle));
+                    return new int[]{xes.get(directionCycle), yes.get(directionCycle)};
                 }
             }
         } else if (directionR == 1) {
-            for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
-                if (direction.get(i).equals("Right")) { //check if the direction i is the same one as the direction counted once
-                    return new int[]{xes.get(i), yes.get(i)};
+            for (int directionCycle = 0; directionCycle < direction.size(); directionCycle++) {
+                if (direction.get(directionCycle).equals("Right")) {
+                    System.out.println("Returning:" + xes.get(directionCycle) + "," + yes.get(directionCycle));
+                    return new int[]{xes.get(directionCycle), yes.get(directionCycle)};
                 }
             }
         } else if (directionD == 1) {
-            for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
-                if (direction.get(i).equals("Down")) { //check if the direction i is the same one as the direction counted once
-                    return new int[]{xes.get(i), yes.get(i)};
+            for (int directionCycle = 0; directionCycle < direction.size(); directionCycle++) {
+                if (direction.get(directionCycle).equals("Down")) {
+                    System.out.println("Returning:" + yes.get(directionCycle) + "," + xes.get(directionCycle));
+                    return new int[]{yes.get(directionCycle), xes.get(directionCycle)};
                 }
             }
         }
@@ -148,7 +156,6 @@ public class TheWrongWayCow {
         return null; //actually return something
         // return new int[]{xes.get(i), yes.get(i)}; //return the x and y values that SHOULD be the same i as the direction only counted once
     }
-
 
     int checkDirectionIfOne(int directionasd, List<Integer> dirlist, List<Integer> xes, List<Integer> yes) { //put void for now
         if (directionasd == 1) {
@@ -160,49 +167,4 @@ public class TheWrongWayCow {
         }
         return 0;
     }
-
-    //        if(direction1==1){ //checks if the specified direction has only been counted once
-    //            for (int i = 0; i < direction.size(); i++) { //if it has, then go through the direction list
-    //                if (direction.get(i)==direction1){ //check if the direction i is the same one as the direction counted once
-    //                    return new int[]{xes.get(i), yes.get(i)}; //return the x and y values that SHOULD be the same i as the direction only counted once
-    //                }
-    //            }
-    //        }
-
-
-
-
-
-//        int[] result = checkFinalColumn(field);
-//        if (result != null) {
-//            return result;
-//        }
-//        result = checkIfOfollowsC(field);
-//        if (result != null) {
-//            return result;
-//        }
-//        return null;
-//    }
-//
-//    private static int[] checkFinalColumn(char[][] field) {
-//        for (int row = 0; row < field.length; row++) {
-//            int col = field[row].length - 1;
-//            char current = field[row][col];
-//            if (current == 'c') return new int[]{col, row};
-//        }
-//        return null;
-//    }
-//
-//    private static int[] checkIfOfollowsC(char[][] field) {
-//        for (int row = 0; row < field.length; row++) {
-//            for (int column = 0; column < field[row].length; column++) {
-//                char current = field[row][column];
-//                if(current == 'c'){
-//                    if(field[row][column-1] == 'o') return new int[]{column, row};
-//                }
-//            }
-//        }
-//        return null;
-//    }
 }
-
